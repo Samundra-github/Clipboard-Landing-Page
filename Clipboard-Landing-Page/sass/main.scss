@@ -27,14 +27,12 @@ h1 {
 h2 {
   font-size: 1.8rem;
 }
-p {
-  padding: 0 1rem;
-}
+
 p {
     color: $grayishBlue;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;;
+    font-size: 1.1rem;
 }
 
 .buttons {
@@ -67,6 +65,7 @@ p {
     background-image: url('../images/bg-header-desktop.png');
     background-repeat: no-repeat;
     background-size: 100%;
+    overflow: clip;
 
     .header-content {
         @include content;
@@ -242,7 +241,8 @@ p {
     
     .footer-social {
         padding-top: 4.5rem;
-        padding-left: 12rem;
+        padding-left: 8rem;
+        overflow: hidden;
     }
 
     .svg {
@@ -355,7 +355,7 @@ p {
       width: 100px !important;
     }
     .ml-4 {
-      margin-left: 0 !important;
+      margin-left: 0rem !important;
     }
     .p3 {
       padding: 1rem !important;
@@ -391,6 +391,9 @@ p {
     background-image: url('../images/bg-header-mobile.png');
     background-repeat: cover;
     background-size: 100%;
+    p {
+      padding: 0rem 1rem;
+    }
   }  
   .buttons {
     flex-direction: column;
@@ -413,17 +416,14 @@ p {
       margin-left: auto !important;
       margin-right: auto;
     }
-    .p3 {
-      
+    .p3 {      
       padding: 2rem !important;
     }
   }
   .footer {
     padding: 2.375rem 5.313rem;
     .row {
-      display: grid !important;
-      margin-left: calc(-1 * var(--bs-gutter-x)) !important;
-      
+      display: grid !important;      
     }
     .footer-logo {
         display: block;
@@ -434,7 +434,7 @@ p {
     }
     
     .p-3 {
-      padding: 0 !important;
+      padding: 0rem !important;
     }
     .col {
       display: flex !important;
@@ -454,9 +454,6 @@ p {
     .footer-social {
       padding-bottom: 1rem; 
       padding-top: 1rem !important;
-
-
-    }
-    
+    }   
   }
 }

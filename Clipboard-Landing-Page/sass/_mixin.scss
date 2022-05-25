@@ -5,14 +5,12 @@
     padding-top: 4rem;
 }
 
-@mixin text ($color, $weight, $size) {
-    color: $color !important;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: $weight !important;
-    font-size: $size !important;
-    padding: 0 1rem !important;
+@mixin paragraph {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 41rem;    
 }
-
 
 @mixin button ($color) {
     background: $color;
@@ -21,5 +19,5 @@
     color: $buttonTextColor;
     padding: 0.9rem 2.5rem;
     font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400  
+    font-weight: 400;  
 }

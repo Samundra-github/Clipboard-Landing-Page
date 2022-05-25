@@ -28,20 +28,12 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  color: #4c545d !important;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 600 !important;
-  font-size: 2.1rem !important;
-  padding: 0 1rem !important;
+  font-size: 2.1rem;
+  padding: 0 1rem;
 }
 
 h2 {
   font-size: 1.8rem;
-}
-
-p {
-  padding: 0 1rem;
-  padding: 0 1rem;
 }
 
 p {
@@ -102,6 +94,7 @@ p {
   background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  overflow: clip;
 }
 
 .header .header-content {
@@ -303,7 +296,8 @@ p {
 
 .footer .footer-social {
   padding-top: 4.5rem;
-  padding-left: 12rem;
+  padding-left: 8rem;
+  overflow: hidden;
 }
 
 .footer .svg {
@@ -422,7 +416,7 @@ p {
     width: 100px !important;
   }
   .item-center .ml-4 {
-    margin-left: 0 !important;
+    margin-left: 0rem !important;
   }
   .item-center .p3 {
     padding: 1rem !important;
@@ -459,6 +453,9 @@ p {
     background-image: url("../images/bg-header-mobile.png");
     background-repeat: cover;
     background-size: 100%;
+  }
+  .header p {
+    padding: 0rem 1rem;
   }
   .buttons {
     -webkit-box-orient: vertical;
@@ -501,7 +498,6 @@ p {
   .footer .row {
     display: -ms-grid !important;
     display: grid !important;
-    margin-left: calc(-1 * var(--bs-gutter-x)) !important;
   }
   .footer .footer-logo {
     display: block;
@@ -511,7 +507,7 @@ p {
     padding-left: auto !important;
   }
   .footer .p-3 {
-    padding: 0 !important;
+    padding: 0rem !important;
   }
   .footer .col {
     display: -webkit-box !important;
