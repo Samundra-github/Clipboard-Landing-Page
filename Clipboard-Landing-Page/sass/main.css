@@ -27,18 +27,79 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
+h1 {
+  color: #4c545d !important;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600 !important;
+  font-size: 2.1rem !important;
+  padding: 0 1rem !important;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+p {
+  padding: 0 1rem;
+  padding: 0 1rem;
+}
+
 p {
   color: #9fabb2;
   font-family: 'Bai Jamjuree', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.buttons .btn.button-ios {
+  -webkit-box-shadow: 0px 10px 27px -12px #26baa4;
+          box-shadow: 0px 10px 27px -12px #26baa4;
+  background: #26baa4;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  padding: 0.9rem 2.5rem;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+}
+
+.buttons .btn.button-ios:hover {
+  opacity: 0.72;
+}
+
+.buttons .btn.button-mac {
+  background: #6173ff;
+  border-radius: 30px;
+  border-style: none;
+  color: white;
+  padding: 0.9rem 2.5rem;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+}
+
+.buttons .btn.button-mac:hover {
+  opacity: 0.72;
 }
 
 /*Header Section.*/
 .header {
   padding-top: 5rem;
   margin-bottom: 5rem;
-  background-image: url("../images/bg-header-mobile.png");
+  background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -69,50 +130,6 @@ p {
   margin-bottom: 3rem;
   text-align: center;
   max-width: 41rem;
-}
-
-.header .header-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1.5rem;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .btn.button-ios {
-  -webkit-box-shadow: 0px 10px 27px -12px #26baa4;
-          box-shadow: 0px 10px 27px -12px #26baa4;
-  background: #26baa4;
-  border-radius: 50px;
-  border-style: none;
-  color: white;
-  padding: 0.9rem 2.5rem;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 400;
-}
-
-.header .btn.button-ios:hover {
-  opacity: 0.72;
-}
-
-.header .btn.button-mac {
-  background: #6173ff;
-  border-radius: 50px;
-  border-style: none;
-  color: white;
-  padding: 0.9rem 2.5rem;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 400;
-}
-
-.header .btn.button-mac:hover {
-  opacity: 0.72;
 }
 
 /*Snippets Section.*/
@@ -196,10 +213,10 @@ p {
   display: grid;
   place-content: center;
   padding-top: 4rem;
+  padding-top: 0rem !important;
 }
 
 .supercharge-content h2 {
-  margin-top: 4rem;
   text-align: center;
 }
 
@@ -210,25 +227,26 @@ p {
   text-align: center;
 }
 
-.container {
+.mb-7 {
   margin-bottom: 7rem;
 }
 
-.container .img-1 {
+.mb-7 .img-1 {
   display: block;
   height: 30px;
   width: auto;
 }
 
-.container h3 {
+.mb-7 h3 {
   font-size: 1.5rem;
   text-align: center;
   padding-top: 3.2rem;
 }
 
-.container .p-1 {
+.mb-7 .p-1 {
   padding: .25rem !important;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 /*Brand Logo Section*/
@@ -271,52 +289,6 @@ p {
   max-width: 43rem;
 }
 
-.clipboard-content .clipboard-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.clipboard-content .btn.button-ios {
-  -webkit-box-shadow: 0px 10px 27px -12px #26baa4;
-          box-shadow: 0px 10px 27px -12px #26baa4;
-  background: #26baa4;
-  border-radius: 50px;
-  border-style: none;
-  color: white;
-  padding: 0.9rem 2.5rem;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 400;
-}
-
-.clipboard-content .btn.button-ios:hover {
-  opacity: 0.72;
-}
-
-.clipboard-content .btn.button-mac {
-  background: #6173ff;
-  border-radius: 50px;
-  border-style: none;
-  color: white;
-  padding: 0.9rem 2.5rem;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-weight: 400;
-}
-
-.clipboard-content .btn.button-mac:hover {
-  opacity: 0.72;
-}
-
 /*Footer Section*/
 .footer {
   background-color: #f7f8f8;
@@ -327,36 +299,6 @@ p {
   padding: 3rem 0rem;
   padding-left: 9rem;
   height: 10rem;
-}
-
-.footer .footer-links {
-  margin-left: -9rem;
-  margin-top: 2rem;
-}
-
-.footer .footer-links .footer-link {
-  text-decoration: none;
-  color: #4c545d;
-  font-family: 'Bai Jamjuree', sans-serif;
-  font-size: 18px;
-}
-
-.footer .footer-links .footer-link:hover {
-  color: #26baa4;
-}
-
-.footer .p1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.footer .p2 {
-  padding-left: 3rem;
-}
-
-.footer .pd-3 {
-  padding-left: 1.5rem;
-  margin-right: 2rem;
 }
 
 .footer .footer-social {
@@ -374,238 +316,226 @@ p {
   fill: #26baa4;
 }
 
+.footer .footer-links {
+  max-width: 500px !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(120px, 120px))[3];
+      grid-template-columns: repeat(3, minmax(120px, 120px));
+  grid-gap: 20px 70px;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  margin-left: -9rem;
+}
+
+.footer .footer-links a {
+  text-decoration: none;
+  color: #4c545d;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-size: 18px;
+}
+
+.footer .footer-links a:hover {
+  color: #26baa4;
+}
+
 /*Media Query and Responsive*/
-@media screen and (min-width: 36rem) {
+@media screen and (max-width: 1410px) {
+  .item-center img {
+    width: 120px !important;
+  }
+  .item-center .ml-4 {
+    margin-left: 1rem !important;
+  }
+  .item-center .p3 {
+    padding: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .snippets-inner {
+    margin-bottom: 5rem !important;
+  }
+  .g-col-7 {
+    margin-left: 5rem;
+    padding-top: 1.5rem;
+  }
+  .g-col-7 p {
+    margin-bottom: 0.5rem !important;
+  }
+  .footer .footer-logo {
+    padding: 3rem 0rem;
+    padding-left: 6rem;
+    height: 10rem;
+  }
+  .footer .footer-links {
+    max-width: 100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(120px, 120px))[3];
+        grid-template-columns: repeat(3, minmax(120px, 120px));
+    grid-gap: 10px 30px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-left: -9rem;
+  }
+  .footer .footer-social {
+    padding-left: 4rem !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .d-flex {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .g-col-6 {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .g-col-7 {
+    width: 100%;
+    margin-left: 0;
+    padding: 70px 0 0;
+    text-align: center;
+  }
+  .g-col-7 .h3 {
+    text-align: center;
+  }
+  .g-col-7 p {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .item-center img {
+    width: 100px !important;
+  }
+  .item-center .ml-4 {
+    margin-left: 0 !important;
+  }
+  .item-center .p3 {
+    padding: 1rem !important;
+  }
+  .footer .footer-logo {
+    padding: 3rem 0rem;
+    padding-left: 3rem;
+    height: 9rem;
+  }
+  .footer .footer-links {
+    max-width: 100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(120px, 120px))[3];
+        grid-template-columns: repeat(3, minmax(120px, 120px));
+    grid-gap: 10px 30px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    margin-left: -9rem;
+  }
+  .footer .footer-social {
+    padding-left: 3rem !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+@media (max-width: 795px) {
   .header {
-    background-image: url("../images/bg-header-desktop.png");
-    background-repeat: no-repeat;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+    background-image: url("../images/bg-header-mobile.png");
+    background-repeat: cover;
     background-size: 100%;
   }
-}
-
-@media screen and (min-width: 48rem) {
-  /* global styles*/
-  p {
-    font-size: 1.14rem;
-  }
-  /* variables */
-  :root {
-    --Main-title: 600 2.7rem 'Bai Jamjuree', sans-serif;
-    --Title: 600 2.3rem 'Bai Jamjuree', sans-serif;
-  }
-  /* reusable classes */
   .buttons {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .buttons a {
-    padding: 0.9rem 2.2rem;
+  .buttons .button-ios, .buttons .button-mac {
+    padding: 1rem 4.5rem !important;
   }
-  .wrapper {
-    margin: 0 1.5rem;
-  }
-  /* styles */
-  #header {
-    padding-top: 8rem;
-  }
-  #header .header__logo img {
-    width: 7.875rem;
-    margin-bottom: 4.063rem;
-  }
-  #header .header__text {
-    width: 42rem;
-  }
-  #header .header__text p {
-    margin-bottom: 3.25rem;
-  }
-  #details .details__text {
-    margin-bottom: 5.188rem;
-  }
-  #details .details__image img {
-    margin-bottom: 6rem;
-  }
-  #workflow .workflow__text {
-    margin-bottom: 5rem;
-  }
-  #brands-logos .brands-logos__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 2.3rem;
-  }
-  #brands-logos img {
-    width: 7rem;
-  }
-  #clipboard {
-    padding-bottom: 9.313rem;
-  }
-  #clipboard .clipboard__text {
-    margin-bottom: 3.313rem;
-  }
-  #clipboard .clipboard__text p {
-    width: 41rem;
-    margin: 0 auto;
-  }
-  #footer {
-    padding: 2.375rem 2rem;
-    text-align: left;
-  }
-  #footer .footer__logo img {
-    margin: 0;
-    width: 3.5rem;
-  }
-  #footer .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  #footer .footer__help {
-    margin: 0;
-  }
-  #footer .footer__help ul {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
-        grid-template-columns: [start] 1fr [middle-1] 1fr [middle-2] 1fr [end];
-    row-gap: 1rem;
-    -webkit-column-gap: 3.4rem;
-            column-gap: 3.4rem;
-  }
-  #footer .footer__help ul li:nth-child(3) {
-    grid-area: 1 / middle-1 / middle-2;
-  }
-  #footer .footer__help ul li:last-child {
-    grid-area: 1 / middle-2 / end;
-  }
-  #footer .footer__help ul li a {
-    font-size: 1.1rem;
-  }
-  #footer .footer__socials {
-    gap: 1.36rem;
-  }
-  #footer .footer__socials a i {
-    font-size: 1.563rem;
-  }
-}
-
-@media screen and (min-width: 62rem) {
-  /* layout */
-  .wrapper {
-    max-width: 62.5rem;
-    overflow: hidden;
-    margin: 0 auto;
-  }
-  #details .wrapper {
-    max-width: 45rem;
-  }
-  #details .details__container {
+  .item-center {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 3rem;
-    overflow: hidden;
-    text-align: left;
-    max-width: 78rem;
-    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3.5rem;
   }
-  #details .details__image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+  .item-center img {
+    width: auto !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  #details .details__image img {
-    margin: 0;
-    position: relative;
-    left: -2rem;
+  .item-center .ml-4 {
+    margin-left: auto !important;
+    margin-right: auto;
   }
-  #details .details__cards {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+  .item-center .p3 {
+    padding: 2rem !important;
   }
-  #more .wrapper {
-    display: -ms-grid;
-    display: grid;
-    place-content: center;
+  .footer {
+    padding: 2.375rem 5.313rem;
   }
-  #more .more__text {
-    width: 45rem;
-    margin: 0 auto 7.25rem;
+  .footer .row {
+    display: -ms-grid !important;
+    display: grid !important;
+    margin-left: calc(-1 * var(--bs-gutter-x)) !important;
   }
-  #workflow {
-    padding-bottom: 10.375rem;
+  .footer .footer-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 0rem;
+    padding-left: auto !important;
   }
-  #workflow .workflow__cards {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+  .footer .p-3 {
+    padding: 0 !important;
   }
-  #workflow .workflow__cards img {
-    width: 3rem;
+  .footer .col {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
-  #workflow .workflow__cards p {
-    font-size: 1.07rem;
+  .footer .footer-links {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    place-items: center;
+    padding-top: 1rem !important;
+    margin-left: auto !important;
+    margin-right: auto;
+    text-align: center;
   }
-  #brands-logos .brands-logos__container {
-    gap: 3.2rem;
+  .footer .footer-links a {
+    padding-bottom: 1rem;
   }
-  #brands-logos img {
-    width: 9rem;
-  }
-  #footer {
-    padding: 2.375rem 6.3rem;
-  }
-  #footer .footer__help ul {
-    -webkit-column-gap: 5.75rem;
-            column-gap: 5.75rem;
-  }
-}
-
-@media screen and (min-width: 75rem) {
-  /* layout */
-  .wrapper {
-    max-width: 75rem;
-    margin: 0 auto;
-  }
-  #details .details__container {
-    gap: 6.5rem;
-  }
-  #workflow .workflow__cards {
-    gap: 2.438rem;
-  }
-  #brands-logos .brands-logos__container {
-    gap: 6rem;
-  }
-  #brands-logos img {
-    width: 10rem;
-  }
-  #footer {
-    padding: 2.375rem 10rem;
+  .footer .footer-social {
+    padding-bottom: 1rem;
+    padding-top: 1rem !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
