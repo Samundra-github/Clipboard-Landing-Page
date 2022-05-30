@@ -15,47 +15,61 @@ body {
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
-h1, h2, h3, h4 {
-    color: $darkBlue !important;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 600;
-}
+
 h1 {
-  font-size: 2.1rem;
+  @include text($darkBlue, 600, 2.1rem);
   padding: 0 1rem;
 }
 h2 {
-  font-size: 1.8rem;
+  @include text($darkBlue, 600, 1.8rem);
+  padding: 0 1rem;
+}
+h3 {
+  @include text($darkBlue, 600, 1.4rem);
+  
 }
 
 p {
-    color: $grayishBlue;
-    font-family: 'Bai Jamjuree', sans-serif;
-    font-weight: 400;
-    font-size: 1.1rem;
+  color: $grayishBlue;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .buttons {
   display: flex;        
   gap: 1.5rem;
   flex-direction: row;
-  align-items: center;
-  .btn.button-ios {
+  place-content: center;
+  .btn {
+    border-radius: 30px;
+    border-style: none;
+  color: $buttonTextColor;
+  padding: 0.9rem 2.5rem;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 400;
+  }
+    
+  .btn.btn__ios {
+    @extend .btn;
+    background-color: $strongCyan;    
     box-shadow: 0px 10px 27px -12px $strongCyan;
-    @include button($strongCyan);
     &:hover{
         opacity: 0.72;
     }
-  }
-  
-  .btn.button-mac {
-    @include button($lightBlue);
+  }  
+  .btn.btn__mac {
+    @extend .btn;
+    background-color: $lightBlue;
     &:hover{
         opacity: 0.72;
     }
   }
 }
 
+.align-center {
+  @include content;
+}
 
 
 /*Header Section.*/
@@ -65,46 +79,17 @@ p {
     background-image: url('../images/bg-header-desktop.png');
     background-repeat: no-repeat;
     background-size: 100%;
-    overflow: clip;
-
-    .header-content {
-        @include content;
-    }
-
-    .header-logo {
-        padding-bottom: 2rem;
-    }
-      
+    .header__logo {
+        padding-bottom: 3rem;
+    }      
     img, svg {
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
-    h1 {
-        text-align: center;
-    }
-    p {
-        @include paragraph;
-    }   
 }
 
 /*Snippets Section.*/
-
-.snippets-content {
-    @include content;
-
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        margin-top: 1rem;
-        margin-bottom: 4rem;
-        text-align: center;
-        max-width: 44rem;
-    }
-}
-
 .d-flex {
     margin-bottom: -4rem;
 }
@@ -128,22 +113,6 @@ p {
 }
 
 /*Access Section*/
-
-.access-content {
-    @include content;
-
-    h2 {
-        margin-top: 2rem;
-        text-align: center;
-    }
-
-    p {
-        margin-top: 1rem;
-        margin-bottom: 6rem;
-        max-width: 43rem;
-        text-align: center;
-    }
-}
 .access-image {
     padding-bottom: 2rem;
     img {
@@ -158,19 +127,9 @@ p {
 
 /*Supercharge Section*/
 
-.supercharge-content {
-    @include content;
-    padding-top: 0rem !important;
-    h2 {
-        text-align: center;
-    }
-
-    p {
-        margin-top: 0.8rem;
-        margin-bottom: 5rem;
-        max-width: 43rem;
-        text-align: center;
-    }
+.supercharge .align-center {
+  padding-top: 0 !important;
+  padding-bottom: 4rem;
 }
 
 .mb-7 {
@@ -196,14 +155,11 @@ p {
 
 /*Brand Logo Section*/
 
-.item-center {
+.brand__logo {
     align-items: center;
     img {
         width: 170px;
         height: auto;
-    }
-    .ml-4 {
-        margin-left: -4rem;
     }
     .p3 {
         padding: 1rem;
@@ -213,38 +169,27 @@ p {
 
 /*Clipboard Section*/
 
-.clipboard-content {
-    @include content;
-
-    h1 {
-        text-align: center;
-    }
-
-    p {
-        margin-top: 1rem;
-        margin-bottom: 3rem;
-        text-align: center;
-        max-width: 43rem;
-    }
+.clipboard-text {
+  margin-bottom: 2rem;
+  h1, p {
+    text-align: center;
+  }
 }
 
 /*Footer Section*/
 
  .footer {
     background-color: $footerBackground;
-    height: auto;
-    .footer-logo {
+    .footer__logo {
         padding: 3rem 0rem;
-        padding-left: 9rem;
+        padding-left: 3rem;
         height: 10rem;
-    }      
-    
-    .footer-social {
+    }        
+    .footer__social {
+        display: flex;
         padding-top: 4.5rem;
         padding-left: 8rem;
-        overflow: hidden;
     }
-
     .svg {
         height: 1.9rem;
         width: auto;
@@ -253,14 +198,13 @@ p {
             fill: $strongCyan;
         }
     }
-    .footer-links {
+    .footer__links {
       max-width: 500px !important;
       display: grid;
       grid-template-columns: repeat(3, minmax(120px, 120px));
       grid-gap: 20px 70px;
       padding-top: 3rem;
       padding-bottom: 1rem;
-      margin-left: -9rem;
       a {
         text-decoration: none;
         color: $darkBlue;
@@ -276,7 +220,7 @@ p {
 /*Media Query and Responsive*/
 
 @media screen and (max-width: 1410px) {
-  .item-center{
+  .brand__logo {
     img {
       width: 120px !important;
     }
@@ -300,26 +244,6 @@ p {
         margin-bottom: 0.5rem !important;
     }
   }
-  .footer {
-    .footer-logo {
-      padding: 3rem 0rem;
-      padding-left: 6rem;
-      height: 10rem;
-    }
-    .footer-links {
-      max-width: 100px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 120px));
-      grid-gap: 10px 30px;
-      padding-top: 3rem;
-      padding-bottom: 1rem;
-      margin-left: -9rem;
-    } 
-    .footer-social {
-      padding-left: 4rem !important;
-      flex-direction: row !important;
-    }
-  }  
 }
 
 @media screen and (max-width: 1100px) {
@@ -350,35 +274,14 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
-  .item-center{
+  .brand__logo {
+    display: block !important;
     img {
-      width: 100px !important;
-    }
-    .ml-4 {
-      margin-left: 0rem !important;
-    }
-    .p3 {
-      padding: 1rem !important;
-    }
-  }
-  .footer {
-    .footer-logo {
-      padding: 3rem 0rem;
-      padding-left: 3rem;
-      height: 9rem;
-    }
-    .footer-links {
-      max-width: 100px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(120px, 120px));
-      grid-gap: 10px 30px;
-      padding-top: 3rem;
-      padding-bottom: 1rem;
-      margin-left: -9rem;
-    } 
-    .footer-social {
-      padding-left: 3rem !important;
-      flex-direction: row !important;
+      display: block;
+      width: auto !important;
+      height: auto;
+      margin: auto;
+      padding-bottom: 3rem;
     }
   }
 }
@@ -397,50 +300,30 @@ p {
   }  
   .buttons {
     flex-direction: column;
-    .button-ios, .button-mac {
+    .button__ios, .button__mac {
       padding: 1rem 4.5rem !important;
     }
   }
-  .item-center{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 3.5rem;
-    img {
-      width: auto !important;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .ml-4 {
-      margin-left: auto !important;
-      margin-right: auto;
-    }
-    .p3 {      
-      padding: 2rem !important;
-    }
-  }
+  
   .footer {
     padding: 2.375rem 5.313rem;
     .row {
       display: grid !important;      
     }
-    .footer-logo {
+    .footer__logo {
         display: block;
         margin-left: auto;
         margin-right: auto;
         padding: 3rem 0rem;
         padding-left: auto !important;
-    }
-    
+    }    
     .p-3 {
       padding: 0rem !important;
     }
-    .col {
-      display: flex !important;
-      align-items: center !important;
+    .col-6 {
+      width: 100% !important;
     }
-    .footer-links {
+    .footer__links {
       grid-template-columns: 1fr;
       place-items: center;
       padding-top: 1rem !important;
@@ -451,7 +334,7 @@ p {
         padding-bottom: 1rem;
       }
     }
-    .footer-social {
+    .footer__social {
       padding-bottom: 1rem; 
       padding-top: 1rem !important;
     }   
